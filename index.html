@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body class="d-flex vh-100 justify-content-center align-items-center">
+
+
+  <section id="setting">
+    <div class="shadow-lg rounded-2 p-3">
+      <h1 class="text-center">Set Quiz Setting</h1>
+      <hr>
+      <div class="form-group mb-3">
+        <label for="category" class="text-black-50 mb-2 header-font fs-4 fw-bold">Choose Category</label>
+        <select id="category" class="form-control" name="category">
+            <option value="9">General Knowledge</option>
+            <option value="27">Animals</option>
+            <option value="15">Video Games</option>
+            <option value="23">History</option>
+            <option value="21">Sports</option>
+            <option value="18">Science: Computers</option>
+        </select>
+    </div>
+    <div class="form-group mb-3">
+      <label for="difficulty" class="  mb-2 header-font text-black-50 fs-4 fw-bold"> Difficulty</label>
+      <div class="form-check ms-2" id="difficulty">
+        <label class="form-check-label mb-1">
+        <input type="radio" class="form-check-input" name="difficulty" id="easy" value="easy" checked>Easy</label>
+      </div>
+      <div class="form-check ms-2">
+        <label class="form-check-label mb-1">
+        <input type="radio" class="form-check-input" name="difficulty" id="medium" value="medium">Medium</label>
+      </div>
+      <div class="form-check ms-2">
+        <label class="form-check-label mb-1">
+        <input type="radio" class="form-check-input" name="difficulty" id="hard" value="hard">Hard</label>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" name="" id="numberOfQuestions" aria-describedby="helpId" placeholder="Number of Questions" required>
+    </div>
+    <div id="questionsAlert" class="alert alert-danger mt-3">Please Choose Number of Questions</div>
+    <button id="startBtn" class="btn btn-outline-dark d-block ms-auto py-2 px-5 rounded-pill my-3">Start
+    </button>
+    </div>
+  </section>
+  
+
+
+  <section id="quiz">
+    <div class="shadow-lg rounded-2 p-3">
+      <h2 class="text-center">Quiz</h2>
+      <hr>
+      <div class="p-4 ">
+        <div class="mb-2">
+            <h5 class="d-inline">Q: </h5>
+            <h5 id="question" class="d-inline"></h5>
+        </div>
+        <div id="displayAnswer"></div>
+        <div id="alert" class="alert alert-danger mt-3">Please Choose Your Answer</div>
+        <button class="btn btn-dark d-block ms-auto py-2 px-4  rounded-pill text-white my-2"
+            id="next">Submit</button>
+    </div>
+    </div>
+  </section>
+
+  <section id="finish">
+    <div class="shadow-lg rounded-2 p-3">
+      <h1 class="py-5 bg-light border-bottom">Finish</h1>
+      <div class="p-4">
+        <h5>Score</h5>
+        <h4 id="score"></h4>
+        <button class="btn btn-outline-danger d-block ms-auto py-2 px-5 rounded-pill my-3" id="tryBtn">Try
+            Again?</button>
+    </div>
+    </div>
+  </section>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
